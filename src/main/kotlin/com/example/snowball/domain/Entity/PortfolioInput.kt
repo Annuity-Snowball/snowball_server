@@ -1,9 +1,12 @@
 package com.example.snowball.domain.Entity
 
+import lombok.NoArgsConstructor
 import java.io.Serializable
 import javax.persistence.*
 
 @Entity
+@Table
+@NoArgsConstructor
 class PortfolioInput (
 
     @Id
@@ -25,5 +28,5 @@ class PortfolioInput (
     private var strategyNumber: Int? = null,
 
     @OneToMany(cascade = [CascadeType.ALL])
-    private var strategies: ArrayList<Strategy>?
+    private var strategies: MutableList<Strategy> = ArrayList<Strategy>(),
 )

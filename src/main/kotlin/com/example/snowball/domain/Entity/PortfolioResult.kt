@@ -1,8 +1,11 @@
 package com.example.snowball.domain.Entity
 
+import lombok.NoArgsConstructor
 import javax.persistence.*
 
 @Entity
+@Table
+@NoArgsConstructor
 class PortfolioResult (
 
     @Id
@@ -20,12 +23,12 @@ class PortfolioResult (
     private var valueWithOutBenefit: Int? = null,
 
     @OneToMany(cascade = [CascadeType.ALL])
-    private var chartDataWithBenefit: ArrayList<ChartData>,
+    private var chartDataWithBenefit: MutableList<ChartData> = ArrayList<ChartData>(),
 
     @OneToMany(cascade = [CascadeType.ALL])
-    private var chartDataWithOutBenefit: ArrayList<ChartData>,
+    private var chartDataWithOutBenefit: MutableList<ChartData> = ArrayList<ChartData>(),
 
     @OneToMany(cascade = [CascadeType.ALL])
-    private var dailyReturnRate: ArrayList<ChartData>
+    private var dailyReturnRate: MutableList<ChartData> = ArrayList<ChartData>()
 
 )

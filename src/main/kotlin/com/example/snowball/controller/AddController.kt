@@ -18,7 +18,7 @@ class AddController(
 ) {
 
     @PostMapping("/add")
-    fun addPortfolio(@RequestBody portInput : PortfolioInputDTO ){
+    fun addPortfolio(@RequestBody portInput : PortfolioInputDTO ): String{
 
         var portfolioInput:PortfolioInput = PortfolioInput(
             id = portInput.id,
@@ -33,5 +33,6 @@ class AddController(
         )
 
         portfolioInputService.create(portfolioInput)
+        return "portfolioInput added"
     }
 }
