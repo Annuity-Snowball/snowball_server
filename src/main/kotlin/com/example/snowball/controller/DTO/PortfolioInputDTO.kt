@@ -5,6 +5,8 @@ import com.example.snowball.domain.Entity.Strategy
 class PortfolioInputDTO (
     var id: Long? = null,
 
+    var name: String? = null,
+
     var startDate: String? = null,
 
     var endDate: String? = null,

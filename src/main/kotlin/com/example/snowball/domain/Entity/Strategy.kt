@@ -13,6 +13,8 @@ class Strategy (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private var id: Long? = null,
 
+    private var productName: String? = null,
+
     private var productNumber: Int? = null,
 
     private var productRate: Int? = null,

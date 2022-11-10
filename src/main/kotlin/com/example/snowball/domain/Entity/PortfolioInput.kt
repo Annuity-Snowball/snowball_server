@@ -13,6 +13,8 @@ class PortfolioInput (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private var id: Long? = null,
 
+    private var name: String? = null,
+
     private var startDate: String? = null,
 
     private var endDate: String? = null,
