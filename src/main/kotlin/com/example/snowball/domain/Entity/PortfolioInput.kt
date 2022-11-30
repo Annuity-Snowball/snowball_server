@@ -1,12 +1,9 @@
 package com.example.snowball.domain.Entity
 
-import lombok.NoArgsConstructor
-import java.io.Serializable
 import javax.persistence.*
 
 @Entity
 @Table
-@NoArgsConstructor
 class PortfolioInput (
 
     @Id
